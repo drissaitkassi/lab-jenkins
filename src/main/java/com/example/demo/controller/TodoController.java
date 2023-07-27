@@ -16,6 +16,10 @@ public class TodoController {
         return this.todoService.getAllTodos();
     }
 
+    @GetMapping("/lab-jenkins")
+    public String labInfo() {
+        return "hello from jenkins lab ";
+    }
     @GetMapping(path = "/{id}")
     Todo allOneTodo(@PathVariable(name = "id") int id){
         return this.todoService.getTodoById(id);
